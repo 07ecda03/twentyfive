@@ -1,7 +1,8 @@
 body {
     background-image: url(/img/windowsbg.jpg);
-    background-size: cover;
-    background-position-y: -100px;
+    background-size: auto 100%; 
+
+    background-repeat: no-repeat;
 }
 
 #thedesktop {
@@ -11,6 +12,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     'a b';
+    position: relative;
 }
 
 .theicons{ 
@@ -21,7 +23,7 @@ body {
     grid-auto-flow: row;
     overflow: hidden;
     margin-left: 40px;
-    margin-top: 35px;
+    margin-top: 80px;
     grid-template-columns: 1fr 1.2fr; 
     grid-template-areas: 
     'left right';
@@ -30,7 +32,8 @@ body {
 .theicons img{
 
     max-height: 64px;
-    max-width: 100px;
+    max-width: 7vw;
+    min-width: 17vw;
     object-fit: contain;
 }
 
@@ -52,14 +55,15 @@ body {
 #notepad{
     grid-area: b;
     display: grid;
-    background: radial-gradient(circle, rgba(211,255,240,1) 0%, rgb(75, 255, 204) 100%);
-    width: 390px;
-    height: 240px;
+    background: radial-gradient(circle, rgba(211, 255, 240, 0.942) 0%, rgba(75, 255, 204, 0.657) 100%);
+    width: 0.28fr;
+    height: auto;
     margin-left: 90px;
     margin-top: 45px;
-    padding: 20px;
+    padding: 16px;
     border-width: 4px;
     border-style: double;
+    position:fixed
     
 
 }
@@ -68,32 +72,97 @@ body {
     justify-content: center;
     
     margin-top: -20px;
-    font-size: 27px;
-    overflow:hidden
+    font-size: 25px;
+    overflow: hidden;
+   
 }
 #notepad main{
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    grid-template-areas: 
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas:
     '1 2';
     margin-top: -10px; 
-    font-size: 14px;
+    
+    
 }
 
 #notepad main #gif{
     display: flex;
-    justify-content: center;
     align-self: center;
+    justify-self: center;
+    margin-top: minmax(-7vw);
 }
 
 
 #notepad main #gif img{
-    height: 100px;
+    max-width: 100%;
+    min-width: 60px;
+    height: auto;
+    position: relative;
+    
 }
 
+#notepad section
 
 #notepad beforeclick{
     
     stroke-dasharray: 0cm;
 
 }
+
+
+
+@media (max-width: 600px) {
+
+    .theicons{
+    
+    }
+
+    .theicons img{
+        max-height: 11vw;
+    }
+
+    #notepad main #gif{
+    
+       margin-bottom: 6px;
+    }
+
+    }
+
+@media (max-width: 820px){
+
+    .theicons{
+        margin-left: -0.1vw
+    }
+
+    #notepad main {
+        grid-template-columns: 30vw;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: 
+        '1'
+        '2';
+    }
+
+    #notepad main #gif img{
+        height: 1fr;
+        width: 1vw;
+        margin-bottom: -1vw;
+        align-self: center;
+    }
+}
+
+
+@media (max-width: 875px) {
+
+
+
+    #notepad main #gif img {
+        margin-top: -1vw;
+       
+    }
+
+    
+    
+
+}
+
