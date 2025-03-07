@@ -1,30 +1,33 @@
 body {
     background-image: url(/img/windowsbg.jpg);
-    background-size: auto 100%; 
-
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #thedesktop {
     display: grid;
     height: 95%;
     width: 95%;
+    grid-template-rows:auto auto auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    'a b';
-    position: relative;
+    'c .'
+    'c d'
+    'c .';
+    
 }
 
 .theicons{ 
     display: grid;
     height: 1fr;
     width: 1fr;
-    grid-area: a; 
+    grid-area: c; 
     grid-auto-flow: row;
     overflow: hidden;
     margin-left: 40px;
     margin-top: 80px;
-    grid-template-columns: 1fr 1.2fr; 
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr; 
     grid-template-areas: 
     'left right';
 }
@@ -51,19 +54,23 @@ body {
 }
 
 
+#areafornotepad{
+    grid-area: d;
+}
+
 
 #notepad{
-    grid-area: b;
+    grid-area: areafornotepad;
     display: grid;
-    background: radial-gradient(circle, rgba(211, 255, 240, 0.942) 0%, rgba(75, 255, 204, 0.657) 100%);
-    width: 0.28fr;
-    height: auto;
+    background: radial-gradient(circle, rgba(211, 255, 240, 0.942) 0%, hwb(168 32% 0% / 0.657) 100%);
+    width: 270px;
     margin-left: 90px;
     margin-top: 45px;
     padding: 16px;
     border-width: 4px;
     border-style: double;
-    position:fixed
+    
+
     
 
 }
@@ -80,13 +87,14 @@ body {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-areas:
-    '1 2';
+    'one two';
     margin-top: -10px; 
     
     
 }
 
 #notepad main #gif{
+    
     display: flex;
     align-self: center;
     justify-self: center;
@@ -102,32 +110,21 @@ body {
     
 }
 
-#notepad section
-
-#notepad beforeclick{
-    
-    stroke-dasharray: 0cm;
-
-}
-
 
 
 @media (max-width: 600px) {
 
-    .theicons{
-    
-    }
+   
 
     .theicons img{
         max-height: 11vw;
     }
 
     #notepad main #gif{
-    
        margin-bottom: 6px;
     }
 
-    }
+}
 
 @media (max-width: 820px){
 
@@ -136,18 +133,18 @@ body {
     }
 
     #notepad main {
-        grid-template-columns: 30vw;
+        grid-template-columns: auto;
         grid-template-rows: 1fr 0.5fr;
         grid-template-areas: 
-        '1'
-        '2';
+        'one'
+        'two';
     }
 
     #notepad main #gif img{
         height: 1fr;
         width: 1vw;
         margin-bottom: -1vw;
-        align-self: center;
+       
     }
 }
 
@@ -158,10 +155,8 @@ body {
 
     #notepad main #gif img {
         margin-top: -1vw;
-       
     }
 
-    
     
 
 }
