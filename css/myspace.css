@@ -1,0 +1,38 @@
+body{  
+    background-image: url(/forphotoshop/skullsbg.jpg);
+}
+
+#allcontent{
+    display: grid;
+    height: 1000px;
+    width: 75vw;
+    background-color: rgb(255, 106, 188);
+    border-style: double;
+    border-width: 5px;
+    justify-self: center;
+    object-fit: contain;
+    padding: 20px;
+    grid-template-rows: repeat(50px);
+    grid-template-columns: 0.7fr 1fr 1fr ;
+    grid-template-areas: 
+    'hd hd hd'
+    'aside mn mn'
+    'mn mn mn'
+    'sec sec sec'
+    'mn1 mn1 as1'
+    'mn1 mn1 as1'
+
+    ;
+}
+
+
+
+
+@media (max-width:620px){
+
+    #allcontent{
+        width: 85vw;
+    }
+
+
+}
