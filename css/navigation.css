@@ -3,7 +3,17 @@ body {
     background-size: cover;
     background-position: center;
     background-position-y: -90px;
+    font-family: 'myfont', sans-serif;
+    font-size: 15px;
+    line-height: 23px;
 }
+
+
+@font-face {
+    font-family: 'myfont';
+    src: url(/font/HelveticaNeueRoman.otf)
+}
+
 
 #thedesktop {
     display: grid;
@@ -31,6 +41,7 @@ body {
     grid-template-columns: 1fr 1fr; 
     grid-template-areas: 
     'left right';
+    
 }
 
 .theicons img{
@@ -39,6 +50,11 @@ body {
     max-width: 7vw;
     min-width: 17vw;
     object-fit: contain;
+    background: radial-gradient(circle, rgba(211, 255, 240, 0.459) 0%, hwb(168 32% 0% / 0.224) 100%);
+    border-width: 1.2px;
+    border-color: rgba(0, 0, 0, 0.836);
+    border-style:solid;
+    border-radius: 1em;
 }
 
 .theicons #left {
@@ -59,6 +75,19 @@ body {
     grid-area: d;
 }
 
+#accessible{
+    background: radial-gradient(circle, rgba(211, 255, 240, 0.942) 0%, hwb(168 32% 0% / 0.657) 100%);
+    width: 270px;
+    padding: 16px;
+    border-width: 1.4px;
+    border-style: solid;
+    border-radius: 1em;
+    margin-left: 90px;
+    margin-top: 45px;
+    justify-content: space-evenly;
+    display: flex;
+    
+}
 
 #notepad{
     grid-area: areafornotepad;
@@ -68,8 +97,9 @@ body {
     margin-left: 90px;
     margin-top: 45px;
     padding: 16px;
-    border-width: 4px;
-    border-style: double;
+    border-width: 1.4px;
+    border-style: solid;
+    border-radius: 1em;
     
 
     
@@ -136,10 +166,12 @@ body {
     .theicons img{
         max-height: 11vw;
     }
+    #accessible{
+        margin-left: 19px;
+    }
 
     #notepad{
       margin-left: 19px;
-      border-width: 3px;
     }
 
 
@@ -154,13 +186,14 @@ body {
         background-size: 180vh;
     }
     
+    #accessible{ 
+        max-width: 195px;
+    }
     #notepad{
         max-width: 195px;
     }
 
-    .theicons{
     
-    }
 }
 
 @media (max-width: 820px){

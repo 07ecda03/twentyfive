@@ -1,30 +1,131 @@
 body{  
-    background-image: url(/forphotoshop/skullsbg.jpg);
+    background-image: url(/img/green_emo_wallpaper_by_tfryfxd_df56vxv-fullview.png) ;
+    font-family: 'myfont', sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    
+}
+
+
+@font-face {
+    font-family: 'myfont';
+    src: url(/font/HelveticaNeueRoman.otf)
+}
+
+
+#myspacelogo{
+    max-height: 64px;
+    max-width: 40vw;
+    object-fit: contain;
+    
+}
+
+.images{ 
+    max-width: 100%;
+    min-width: 60px;
+    height: auto;
+    position: relative;
 }
 
 #allcontent{
     display: grid;
-    height: 1000px;
+    height: auto;
     width: 75vw;
-    background-color: rgb(255, 106, 188);
+    background-color: rgb(255, 255, 255);
     border-style: double;
     border-width: 5px;
+    border-color: rgb(0, 0, 0);
     justify-self: center;
     object-fit: contain;
-    padding: 20px;
-    grid-template-rows: repeat(50px);
-    grid-template-columns: 0.7fr 1fr 1fr ;
-    grid-template-areas: 
-    'hd hd hd'
-    'aside mn mn'
-    'mn mn mn'
-    'sec sec sec'
-    'mn1 mn1 as1'
-    'mn1 mn1 as1'
-
-    ;
+    padding: 20px; 
+    border-radius: 1em;
+    
 }
 
+header{
+    height: 100px;
+    background: radial-gradient(circle, rgba(211,255,240,1) 0%, rgba(85,255,221,1) 100%);
+    font-size: 36px;
+    padding: 1rem;
+    border-radius: 1em;
+    display: flex;
+    gap: 90px;
+    align-self: center;       
+}
+
+
+
+#secasi{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'se as';
+}
+
+aside{
+    display: grid;
+    grid-area: as;
+    align-items: center;
+    
+}
+
+button{
+    background: radial-gradient(circle, rgba(211,255,240,1) 0%, rgba(85,255,221,1) 100%);
+    height: 40px;
+    border: none;
+    border-radius: 1em;
+}
+
+#secone{
+    display: grid;
+    grid-area: se;
+    background-color:  rgb(255, 255, 255);
+}
+
+#secbox{
+    display: flex;
+    background: radial-gradient(circle, rgba(211,255,240,1) 0%, rgba(50,230,230,1) 100%);
+    height: 320px;
+    width: 350px;
+    align-self: center;
+    justify-self: center;
+    line-height: 25px;
+    border-radius: 1em;
+    
+}
+
+
+main{
+    height: auto; 
+}
+
+
+.mainone{
+    background-color: rgb(172, 255, 238);
+    padding: 1rem;
+    border-radius: 1em;
+}
+
+#gallery{
+    display: flex;
+    height: 300px;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+
+@media (max-width:530px){
+
+    #secasi{
+        
+        grid-template-columns: 1fr;
+        grid-template-areas: 'se'
+        'as';
+    }
+
+   
+
+}
 
 
 
